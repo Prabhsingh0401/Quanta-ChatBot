@@ -1,0 +1,43 @@
+.hero-section{
+
+    position: absolute;
+
+    h1 {
+        margin-top: 40%;
+        margin-left: 80%;
+        font-size: 150px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        color: #fff; /* Base text color */
+        text-shadow: 
+            0 0 4px rgba(255, 255, 255, 0.5), /* Subtle outer glow */
+            0 0 8px rgba(255, 255, 255, 0.3); /* Larger subtle glow */
+        -webkit-font-smoothing: antialiased; /* Smooth text rendering */
+        -moz-osx-font-smoothing: grayscale; /* Smooth text rendering */
+    }
+
+    p{
+        width: 100%;
+        margin-left: 105%;
+        margin-top: -5vh;
+        font-size: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        color: #fff; /* Base text color */
+        text-shadow: 
+            0 0 4px rgba(255, 255, 255, 0.5), /* Subtle outer glow */
+            0 0 8px rgba(255, 255, 255, 0.3); /* Larger subtle glow */
+        -webkit-font-smoothing: antialiased; /* Smooth text rendering */
+        -moz-osx-font-smoothing: grayscale; /* Smooth text rendering */
+    }
+        
+    button{
+        background-color: #ffffff00;
+        border:none;
+        z-index: 10;
+        margin-left: 105%;
+        width: 100%;
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
