@@ -1,18 +1,18 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import NET from "vanta/dist/vanta.net.min";
 import * as THREE from "three";
-import Chatbot from './chatbot'; 
+import Chatbot from "./ChatBot";
 import './page.scss';
 
 const HeroSection = () => {
-  const [vantaEffect, setVantaEffect] = useState(0);
+  const [vantaEffect, setVantaEffect] = useState(null); // Updated to use null
   const [showChatbot, setShowChatbot] = useState(false);
   const vantaRef = useRef(null);
 
   useEffect(() => {
-    if (!vantaEffect) {
+    if (!vantaEffect && vantaRef.current) {
       setVantaEffect(
         NET({
           el: vantaRef.current,
@@ -44,14 +44,17 @@ const HeroSection = () => {
 
   return (
     <>
-      <div ref={vantaRef} style={{ height: '100vh', width: '100vw', position: 'absolute', zIndex: -10 }}>
-      </div>
+      <div ref={vantaRef} style={{ height: '100vh', width: '100vw', position: 'absolute', zIndex: -10 }} />
       <div className="hero-section">
         <h1>Quanta</h1>
         <p>Your Personal Chat Bot</p>
         <button onClick={handleButtonClick}>Let's Go &rarr;</button>
       </div>
-      {showChatbot && <Chatbot onClose={() => setShowChatbot(false)} />}
+      {showChatbot && (
+        <div className="chatbot-container show">
+          <Chatbot onClose={() => setShowChatbot(false)} />
+        </div>
+      )}
     </>
   );
 };
