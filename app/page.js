@@ -48,7 +48,7 @@ const HeroSection = () => {
       <div className="hero-section">
         <h1>Quanta</h1>
         <p>Your Personal Chat Bot</p>
-        <button onClick={handleButtonClick}>Let's Go &rarr;</button>
+        <button onClick={handleButtonClick}>Let&apos;s Go →</button>
       </div>
       {showChatbot && (
         <div className="chatbot-container show">
